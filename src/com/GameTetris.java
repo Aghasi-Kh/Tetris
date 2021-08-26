@@ -1,3 +1,5 @@
+package com;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
@@ -46,7 +48,6 @@ class GameTetris extends JFrame {
             {0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0}};
     int gameScore = 0;
     int[][] mine = new int[FIELD_HEIGHT + 1][FIELD_WIDTH]; // mine/glass
-    JFrame frame;
     Canvas canvas = new Canvas();
     Random random = new Random();
     Figure figure = new Figure();
@@ -115,7 +116,7 @@ class GameTetris extends JFrame {
     }
 
     class Figure {
-        private ArrayList<Block> figure = new ArrayList<Block>();
+        private ArrayList<Block> figure = new ArrayList();
         private int[][] shape = new int[4][4];
         private int type, size, color;
         private int x = 3, y = 0; // starting left up corner
@@ -219,7 +220,7 @@ class GameTetris extends JFrame {
         }
     }
 
-    class Block { // building element for Figure
+    class Block { // building element for com.frame.Figure
         private int x, y;
 
         public Block(int x, int y) {

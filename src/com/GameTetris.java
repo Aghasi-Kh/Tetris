@@ -160,6 +160,7 @@
 //            return false;
 //        }
 //
+
 //        void move(int direction) {
 //            if (!isTouchWall(direction)) {
 //                int dx = direction - 38; // LEFT = -1, RIGHT = 1

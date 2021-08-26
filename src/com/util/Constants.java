@@ -1,7 +1,5 @@
 package com.util;
 
-import lombok.Getter;
-
 public interface Constants {
       String TITLE_OF_PROGRAM = "Tetris";
       int BLOCK_SIZE = 25;
@@ -26,7 +24,6 @@ public interface Constants {
             {{1, 1, 1, 0}, {0, 1, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {3, 0xa000f0}}, // T
             {{1, 1, 0, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}, {3, 0xf00000}}  // Z
     };
-      int[] SCORES = {100, 300, 700, 1500};
       int[][] GAME_OVER_MSG = {
             {0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0},
             {1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1},

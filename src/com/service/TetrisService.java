@@ -50,33 +50,15 @@ public class TetrisService extends JFrame {
                 e.printStackTrace();
             }
             canvas.repaint();
-            checkFilling();
             if (figure.isTouchGround()) {
                 figure.leaveOnTheGround();
                 figure = new Figure();
-                gameOver = figure.isCrossGround(); // Is there space for a new figure?
+                gameOver = figure.isCrossGround();
             } else
                 figure.stepDown();
         }
     }
 
-    void checkFilling() { // check filling rows
-        int row = FIELD_HEIGHT - 1;
-        int countFillRows = 0;
-        while (row > 0) {
-            int filled = 1;
-            for (int col = 0; col < FIELD_WIDTH; col++)
-                filled *= Integer.signum(mine[row][col]);
-            if (filled > 0) {
-                countFillRows++;
-                for (int i = row; i > 0; i--) System.arraycopy(mine[i - 1], 0, mine[i], 0, FIELD_WIDTH);
-            } else
-                row--;
-        }
-        if (countFillRows > 0) {
-            gameScore += SCORES[countFillRows - 1];
-            setTitle(TITLE_OF_PROGRAM + " : " + gameScore);
-        }
-    }
+
 
 }
